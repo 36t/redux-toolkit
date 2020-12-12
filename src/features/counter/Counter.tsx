@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+
 import {
   decrement,
   increment,
@@ -7,11 +8,17 @@ import {
   incrementAsync,
   selectCount
 } from './counterSlice'
+
 import styles from './Counter.module.css'
 
 export const Counter: React.FC = () => {
+  // Storeのデータ(state)を取得する
+  // export const selectCount = state => state.counter.value
   const count = useSelector(selectCount)
+
+  // dispatch
   const dispatch = useDispatch()
+
   const [incrementAmount, setIncrementAmount] = useState('2')
 
   return (
