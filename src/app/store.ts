@@ -1,15 +1,15 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 
-// スライサーからReducerをインポート
-// export default counterSlice.reducer;
 import counterReducer from 'features/counter/counterSlice'
+import taskReducer from 'features/task/taskSlice'
 
 // sliceを登録・結合している
 // combine reducerが後ろで走っている
 export const store = configureStore({
   reducer: {
-    // この「counter」はsliceのnameに合わせる必要有
-    counter: counterReducer
+    // この「counter」はsliceの'name'に合わせる必要有
+    counter: counterReducer,
+    task: taskReducer
   }
 })
 
