@@ -4,6 +4,7 @@ import './App.css'
 import { Counter } from 'features/counter/Counter'
 import TaskList from 'features/task/TaskList'
 import TaskInput from 'features/task/TaskInput'
+import Fetch from 'features/fetch/Fetch'
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
         <Counter />
         <TaskList />
         <TaskInput />
+        <Fetch />
       </header>
     </div>
   )
