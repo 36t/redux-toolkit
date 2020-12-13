@@ -14,7 +14,6 @@ const TaskItem: React.FC<Props> = (props:Props) => {
   const dispatch = useDispatch()
 
   return (
-
     <div>
       <input type="checkbox" onClick={() => dispatch(completeTask(task))} defaultChecked={task.completed} />
       <span>{task.title}</span>
