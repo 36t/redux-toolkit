@@ -5,7 +5,7 @@ import { AppThunk, RootState } from 'app/store'
 * src/features/task/taskSlice.tsを複製・調整した
 */
 
-type TaskType = {
+export type TaskType = {
   id: number
   title: string
   completed: boolean
@@ -77,5 +77,5 @@ export const { newTask, completeTask, deleteTask } = taskSlice.actions
 // 変更箇所③
 export const selectTasks = (state: RootState):TaskType[] => state.task.tasks
 
-// app/storeで利用する
+// app/storeで利用
 export default taskSlice.reducer
