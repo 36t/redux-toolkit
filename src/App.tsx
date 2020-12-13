@@ -1,6 +1,8 @@
 import React from 'react'
-import { Counter } from './features/counter/Counter'
 import './App.css'
+
+import { Counter } from 'features/counter/Counter'
+import TaskList from 'features/task/TaskList'
 
 const App: React.FC = () => {
   return (
@@ -8,6 +10,7 @@ const App: React.FC = () => {
       <header className="App-header">
         <h1>Redux toolkit</h1>
         <Counter />
+        <TaskList />
       </header>
     </div>
   )
